@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
     const photoGrid = document.querySelector('.photo-grid');
     const photos = [
-        'photos/photo1.jpg',
-        'photos/photo2.jpg',
-        'photos/photo3.jpg',
-        // Add more photo paths here
+        { src: 'photos/photo1.jpg', caption: 'A moment in time' },
+        { src: 'photos/photo2.jpg', caption: 'Nature’s beauty' },
+        { src: 'photos/photo3.jpg', caption: 'Urban exploration' },
+        // Add more photos and captions here
     ];
 
     photos.forEach(photo => {
@@ -12,15 +12,15 @@ document.addEventListener("DOMContentLoaded", function() {
         imgContainer.classList.add('photo-container');
 
         const img = document.createElement('img');
-        img.src = photo;
+        img.src = photo.src;
         img.alt = 'Gallery Photo';
 
-        const hoverButton = document.createElement('button');
-        hoverButton.textContent = '👀'; // Emoji for the button
-        hoverButton.classList.add('hover-button');
+        const caption = document.createElement('div');
+        caption.classList.add('caption');
+        caption.textContent = photo.caption;
 
         imgContainer.appendChild(img);
-        imgContainer.appendChild(hoverButton);
+        imgContainer.appendChild(caption);
         photoGrid.appendChild(imgContainer);
     });
 });
