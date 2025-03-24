@@ -3,59 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffee and Spice - Photography Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+    <title>Coffee and Spice</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#game">Game</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <header>
-        <h1>Coffee and Spice</h1>
-        <nav>
-            <ul>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
+    <!-- Gallery Section -->
     <section id="gallery">
-        <h2>My Photography</h2>
-        <div class="grid">
-            <div class="photo-container">
-                <img src="photos/photo1.jpg" alt="Photo 1">
-                <button class="like-btn">❤️ Like</button>
-            </div>
-            <div class="photo-container">
-                <img src="photos/photo2.jpg" alt="Photo 2">
-                <button class="like-btn">❤️ Like</button>
-            </div>
-            <div class="photo-container">
-                <img src="photos/photo3.jpg" alt="Photo 3">
-                <button class="like-btn">❤️ Like</button>
-            </div>
+        <h2>Gallery</h2>
+        <div class="photo-grid">
+            <!-- Photos will be dynamically loaded here -->
         </div>
     </section>
 
+    <!-- About Me Section -->
     <section id="about">
         <h2>About Me</h2>
-        <p>Welcome to Coffee and Spice, where I share my passion for photography.</p>
+        <p>Welcome to my photography website! Here, I showcase my passion for capturing moments through the lens.</p>
     </section>
 
+    <!-- Game Section -->
+    <section id="game">
+        <h2>Color Snake Game</h2>
+        <canvas id="gameCanvas" width="400" height="400"></canvas>
+        <p>Target Color: <span id="targetColor"></span></p>
+    </section>
+
+    <!-- Contact Section -->
     <section id="contact">
-        <h2>Contact Me</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+        <h2>Contact</h2>
+        <p>Feel free to reach out to me at <a href="mailto:your.email@example.com">your.email@example.com</a>.</p>
     </section>
 
-    <footer>
-        <p>© 2024 Coffee and Spice. All rights reserved.</p>
-    </footer>
-
+    <script src="script.js"></script>
+    <script src="game.js"></script>
 </body>
 </html>
